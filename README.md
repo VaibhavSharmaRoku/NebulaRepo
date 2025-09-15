@@ -163,3 +163,27 @@ go run main.go
 ![Description of image](images/pingPongpostman.png)
 
 
+# Technical Answers
+
+## 1. AWS/Kubernetes Production Incident
+During a production issue in AWS EKS, some pods were being evicted due to node resource exhaustion.  
+- Used **kubectl**, CloudWatch, and Grafana dashboards to identify CPU/memory pressure.  
+- Fixed by scaling the cluster, tuning pod resource limits, and redeploying.  
+- Later added **alerts and dashboards** to catch such issues earlier and reduce MTTR.  
+
+---
+
+## 2. CI/CD Pipeline Optimization
+I worked on **GitHub Actions/Jenkins pipelines** for containerized apps.  
+- Optimized with caching and parallel stages to cut build time.  
+- Added **blue-green deployments** in Kubernetes for safe rollbacks.  
+- Integrated **image scanning and logging** for security and observability.  
+
+---
+
+## 3. Infrastructure as Code (Terraform/Ansible)
+Used **Terraform** to automate AWS infra (VPC, EC2, EKS, RDS) and **Ansible** for configs.  
+- Helped standardize environments and avoid manual errors.  
+- Modularized Terraform code so new environments could be spun up quickly.  
+- Reduced setup time from days to under an hour.  
+
